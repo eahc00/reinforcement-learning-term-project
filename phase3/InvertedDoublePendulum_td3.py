@@ -11,7 +11,13 @@ from callback import SaveOnBestTrainingRewardCallback
 # import numpy as np
 # np.bool8 = np.bool
 
-def train(env_id, log_base_dir="logs", model_base_dir="models", model_name=None, total_timesteps=300000):
+def train(
+        env_id,
+        log_base_dir="logs",
+        model_base_dir="models",
+        model_name=None,
+        total_timesteps=300000
+):
     # Environment
     env = make_vec_env(env_id, n_envs=4)
     env = VecMonitor(env, log_base_dir)
@@ -28,7 +34,7 @@ def train(env_id, log_base_dir="logs", model_base_dir="models", model_name=None,
         policy="MlpPolicy",
         env=env,
         policy_kwargs=dict(net_arch=[400, 300]),
-        gamma=0.98,
+        gamma=0.99,
         # -------------------------------------------------
         learning_rate=7e-4,
         # learning_rate=1e-3,
@@ -99,9 +105,9 @@ def run(env_id, model_base_dir="models", model_name=None, n_episodes=5):
 
 
 if __name__ == "__main__":
-    env_id = "InvertedPendulum-v5"
+    # env_id = "InvertedPendulum-v5"
     # env_id = "CartPole-v1"
-    # env_id = "InvertedDoublePendulum-v5"
+    env_id = "InvertedDoublePendulum-v5"
     # env_id = "Pendulum-v1"
     
     train(env_id)

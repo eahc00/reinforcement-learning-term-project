@@ -324,6 +324,10 @@ pyrightconfig.json
 phase1/__pycache__/
 phase1/logs/
 phase1/models/
-
-
+phase2/__pycache__/
+phase2/logs/
+phase2/models/
+phase3/__pycache__/
+phase3/logs/
+phase3/models/
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,python,macos

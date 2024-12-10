@@ -9,9 +9,15 @@ from callback import SaveOnBestTrainingRewardCallback
 # import numpy as np
 # np.bool8 = np.bool
 
-def train(env_id, log_base_dir="logs", model_base_dir="models", model_name=None, total_timesteps=100000):   
+def train(
+        env_id,
+        log_base_dir="logs",
+        model_base_dir="models",
+        model_name=None,
+        total_timesteps=300000
+):
     # Environment
-    env = make_vec_env(env_id, n_envs=8)
+    env = make_vec_env(env_id, n_envs=4)
     env = VecMonitor(env, log_base_dir)
 
     # Agent Model

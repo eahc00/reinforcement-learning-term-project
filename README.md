@@ -12,3 +12,19 @@ InvertedPendulum-v5 환경에 대하여 stable baselines3 zoo hyper parameter �
 
 - InvertedDoublePendulum-v5에 대해서도 같은 방식으로 가능.
 
+
+### phase2
+이산적 알고리즘 별 cartpole 비교
+- A2C
+- PPO
+
+- PPO가 수렴이 더 빠르고 더 높은 reward를 가진다.
+
+
+### Phase3
+연속적 알고리즘 별 inverted double pendulum
+- InvertedPendulum과 InvertedDoublePendulum에 대한 하이퍼 파라미터 정의가 없음.
+- SAC
+	- InvertedPendulum-v5 : batch_size=128
+- TD3
+	- n_envs = 4, total_timesteps를 각 2e+5, 3e+5 학습 -> 안정적으로 학습 가능.
