@@ -14,7 +14,7 @@ def train(
         log_base_dir="logs",
         model_base_dir="models",
         model_name=None,
-        total_timesteps=1e6,
+        total_timesteps=1e5,
         n_envs=1
 ):
     # Environment
