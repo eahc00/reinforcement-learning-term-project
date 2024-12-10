@@ -22,7 +22,7 @@ InvertedPendulum-v5 환경에 대하여 stable baselines3 zoo hyper parameter �
 
 
 ### Phase3
-연속적 알고리즘 별 inverted double pendulum
+연속적 알고리즘 별 inverted double pendulum, inverted pendulum 실험.
 - InvertedPendulum과 InvertedDoublePendulum에 대한 하이퍼 파라미터 정의가 없음.
 - SAC
 	- InvertedPendulum-v5 : batch_size=128
