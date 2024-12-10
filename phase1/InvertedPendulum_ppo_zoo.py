@@ -14,7 +14,7 @@ def train(
         log_base_dir="logs",
         model_base_dir="models",
         model_name=None,
-        total_timesteps=1e5,
+        total_timesteps=1e6,
         n_envs=1
 ):
     # Environment
@@ -39,7 +39,7 @@ def train(
         clip_range=0.2,
         ent_coef=1e-6,
         max_grad_norm=0.3,
-        vf_coef=0.3,
+        vf_coef=0.4,
         # -------------------------------------------------
         tensorboard_log=log_dir,
         verbose=1,
