@@ -14,7 +14,7 @@ def train(
         log_base_dir="logs",
         model_base_dir="models",
         model_name=None,
-        total_timesteps=100000
+        total_timesteps=2e5
 ):
     # Environment
     env = make_vec_env(env_id, n_envs=1)
@@ -28,15 +28,15 @@ def train(
         policy="MlpPolicy",
         env=env,
         # -------------------------------------------------
-        learning_rate=0.000155454,
+        learning_rate=3e-4,
         n_steps=128,
-        batch_size=512,
-        n_epochs=10,
+        batch_size=64,
+        n_epochs=20,
         gamma=0.98,
         gae_lambda=0.8,
-        clip_range=0.4,
-        ent_coef=1.05057e-06,
-        vf_coef=0.695929,
+        clip_range=0.2,
+        ent_coef=1e-6,
+        vf_coef=0.4,
         max_grad_norm=0.5,
         # -------------------------------------------------
         tensorboard_log=log_dir,
@@ -89,6 +89,7 @@ def run(env_id, model_base_dir="models", model_name=None, n_episodes=5):
             if terminated or truncated:
                 time.sleep(1.0)
                 print("n_steps: {}".format(n_steps))
+                print("episode_reward: {}".format(episode_reward))
                 episode_reward = 0
                 n_steps = 0
                 break

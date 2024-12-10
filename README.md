@@ -9,3 +9,6 @@ InvertedPendulum-v5 환경에 대하여 stable baselines3 zoo hyper parameter �
     - VecNormalize 적용 차이 : v2에 있는 VecNormalize를 빼니까 성능이 훨씬 개선됨.
     - learning rate : 학습률을 낮추니 훨씬 안정적으로 학습. Normalize 유무의 영향이 있다고 추측됨.
     - batch size : 마찬가지로 Normalize를 빼고 batch size를 낮추니 안정적으로 학습됨.
+
+- InvertedDoublePendulum-v5에 대해서도 같은 방식으로 가능.
+
